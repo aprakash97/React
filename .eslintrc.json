@@ -1,0 +1,41 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:import/errors",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:jsx-a11y/recommended"
+    ],
+    "rules": {
+        "react/prop-types": 0,
+        "react/react-in-jsx-scope": 0
+    },
+    "plugins": [
+        "react",
+        "import",
+        "jsx-a11y"
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest", //moders version
+        "sourceType": "module", // import and export not common js
+        "ecmaFeatures": {
+            "jsx": true // ESLint can properly lint and validate your JSX code for any potential errors or coding conventions, ensuring consistency and accuracy in your React codebase.
+        }
+    },
+    //What kind of globals are available, don't throw errors
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "import/resolver": {
+            "node":  {
+                "extensions": [".js", ".jsx"]
+            }
+        }
+    }
+}
