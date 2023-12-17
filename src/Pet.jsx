@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+// import { useQueryClient } from "@tanstack/react-query"
 
 const Pet = ({name, animal, breed, images, location, id}) => {
     let hero = "http://pets-images.dev-apis.com/pets/none.jpg"
@@ -6,6 +7,12 @@ const Pet = ({name, animal, breed, images, location, id}) => {
     if(images.length){
         hero = images[0]
     }
+
+    // const queryClient = useQueryClient()
+    // const queryCache = queryClient.getQueryCache();
+    // console.log("TESTING", queryCache)
+
+
     return(
         <Link to={`/details/${id}`} className="pet">
             <div className="image-container">
